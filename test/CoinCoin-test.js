@@ -47,10 +47,10 @@ describe('CoinCoin Token', function () {
     })
   })
 
-  describe('Allowance', function () {
+  describe('Allowance system', function () {
     // Tester le système d'allowance ici
   })
-  describe('Transfer', function () {
+  describe('Token transfers', function () {
     it('transfers tokens from sender to receipient', async function () {})
     it('transferFrom tokens from sender to receipient', async function () {})
     it('emits event Transfer when transfer token', async function () {})
