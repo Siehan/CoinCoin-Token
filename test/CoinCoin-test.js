@@ -47,7 +47,7 @@ describe('CoinCoin Token', function () {
     })
   })
 
-  describle('Allowance', function () {
+  describe('Allowance', function () {
     // Tester le système d'allowance ici
   })
   describe('Transfer', function () {
