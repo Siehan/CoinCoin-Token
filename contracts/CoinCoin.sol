@@ -3,10 +3,11 @@
 pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-import "./IERC20.sol";
-import "./extensions/IERC20Metadata.sol";
-import "../../utils/Context.sol";
+// import "./IERC20.sol";
+// import "./extensions/IERC20Metadata.sol";
+// import "../../utils/Context.sol";
 
 /// @title EIP-20: ERC-20 Token Standard
 /// @author The name of the author
@@ -72,6 +73,7 @@ contract CoinCoin {
         require(spender != address(0), "CoinCoin: approve to the zero address");
         _allowances[msg.sender][spender] = amount;
         emit Approval(msg.sender, spender, amount);
+        return true;
     }
 
     function transferFrom(
@@ -95,6 +97,8 @@ contract CoinCoin {
         _balances[sender] -= amount;
         _balances[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
+
+        return true;
     }
 
     function _mint(address account, uint256 amount) internal {
